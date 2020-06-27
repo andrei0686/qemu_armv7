@@ -1,3 +1,3 @@
-FROM multiarch/qemu-user-static:x86_64-aarch64 as qemu
-FROM arm64v8/ubuntu
-COPY --from=qemu /usr/bin/qemu-aarch64-static /usr/bin
+FROM multiarch/qemu-user-static:x86_64-arm as qemu
+FROM arm32v7/debian:stable-slim
+COPY --from=qemu /usr/bin/qemu-arm-static /usr/bin
