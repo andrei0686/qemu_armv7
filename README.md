@@ -11,19 +11,19 @@ docker run --rm --privileged multiarch/qemu-user-static --reset
 
 после этого мы можем запускать контейнеры arm на x86.
 
-# можно собрать образ из dockerfile
+## можно собрать образ из dockerfile
 ```sh
 git clone https://github.com/andrei0686/qemu_armv7
 cd qemu_armv7/
 docker build --rm -t qemu_armv7 . 
 ```
 
-# или получить готовый образ из репозитория github
+## или получить готовый образ из репозитория github
 ```sh
 docker pull andrei0686/qemu_armv7
 ```
 
-# затем запустим контейнер из образа и проверим архитектуру
+## затем запустим контейнер из образа и проверим архитектуру
 ```sh
 docker run --rm -t qemu_armv7 uname -m
 ```
