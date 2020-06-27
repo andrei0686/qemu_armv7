@@ -1,9 +1,3 @@
-FROM arm32v7/debian:stretch-slim
-RUN ls -lha /usr/bin
-COPY qemu-arm-static /usr/bin
-
-RUN apt-get update;\
-    apt-get install -y nginx;\
-    echo "\ndaemon off;" >> /etc/nginx/nginx.conf
-
-CMD ["nginx"]
+FROM multiarch/qemu-user-static:x86_64-aarch64 as qemu
+FROM arm64v8/ubuntu
+COPY --from=qemu /usr/bin/qemu-aarch64-static /usr/bin
