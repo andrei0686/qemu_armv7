@@ -18,7 +18,7 @@ cd qemu_armv7/
 docker build --rm -t qemu_armv7 . 
 ```
 
-## или получить готовый образ из репозитория github
+## или получить готовый образ из репозитория dockerhub
 ```sh
 docker pull andrei0686/qemu_armv7
 ```
