@@ -7,4 +7,6 @@
 # sudo apt-get install qemu binfmt-support qemu-user-static 
 # docker run --rm --privileged multiarch/qemu-user-static --reset
 
-после этого мы можем запускать контейнеры arm на x86
+после этого мы можем запускать контейнеры arm на x86.
+
+готовый docker образ лежит на github andrei0686/qemu_armv7
