@@ -11,7 +11,9 @@
 
 # можно собрать образ из dockerfile
 git clone https://github.com/andrei0686/qemu_armv7
+
 cd qemu_armv7/
+
 docker build --rm -t qemu_armv7 . 
 
 # или получить готовый образ из репозитория github
@@ -19,5 +21,6 @@ docker pull andrei0686/qemu_armv7
 
 # затем запустим контейнер из образа и проверим архитектуру
 docker run --rm -t qemu_armv7 uname -m
+
 armv7l
 
