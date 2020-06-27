@@ -3,7 +3,7 @@
 
 в качестве примера была взята информация с https://www.stereolabs.com/docs/docker/building-arm-container-on-x86/
 
-для создания необходимо на установить пакеты эмуляции процессоров qemu
+для создания необходимо установить пакеты эмуляции процессоров qemu
 # sudo apt-get install qemu binfmt-support qemu-user-static 
 # docker run --rm --privileged multiarch/qemu-user-static --reset
 
