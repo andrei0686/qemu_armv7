@@ -9,5 +9,4 @@ deb-src http://httpredir.debian.org/debian stretch-backports main contrib non-fr
 echo "Package: * && \
 Pin: release n=stretch-backports && \
 Pin-Priority: 500 && \
-" > etc/apt/preferences.d/backport 
-
+" > etc/apt/preferences.d/backport
