@@ -16,6 +16,8 @@ docker run --rm --privileged multiarch/qemu-user-static --reset
 git clone https://github.com/andrei0686/qemu_armv7
 cd qemu_armv7/
 docker build --rm -t qemu_armv7 . 
+# если установлен buildx в docker тогда 
+docker buildx build --platform linux/arm/v7 -t qemu_armv7 .
 ```
 
 ## или получить готовый образ из репозитория dockerhub
